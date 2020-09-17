@@ -3,24 +3,23 @@ Creado en el año 2019. Sistema basado en linq, sql server.
 
 Modulos: 
 - ingreso: segun el perfil de usuario se tendra acceso a distintas partes del sistema. 
-- usuarios: alta, modificacion, baja, consulta de usuarios.
-- clientes: alta, modificacion, baja, consulta de clientes (necesario para la carga de la orden de produccion).
-- vendedores: alta, modificacion, baja, consulta de vendedores (necesario para la carga de la orden de produccion).
-- piezas
-- sector
-- colaboradores
-- ordenes de produccion
-- retrabajos
-- stock 
-- tareas
-- etiquetas de entrega
-- graficos
-- correo electronico
-- tickets
-- sugerencias
-- logistica
-- mensajes
-- permisos
+- usuarios: personas que tienen acceso al sistema. 
+- clientes: registro de personas que hacen pedidos.
+- vendedores: personas que atienden a clientes en sus pedidos.
+- piezas: materia prima, ejemplo: lonas, vinilos, papeles, tintas, etc. (necesarios para la carga de la orden de produccion).
+- sector: sectores de trabajo, por ejemplo: digital, offset, terminacion, mantenimiento, deposito, etc. (necesarios para la carga de tareas o funciones de los colaboradores).
+- colaboradores: personas que trabajan en la orden de produccion.
+- ordenes de produccion: trabajos a realizar para su entrega.
+- retrabajos: trabajos que por algun motivo se deben reahacer.
+- stock: control de productos semi-terminados. 
+- tareas: actividades de los colaboradores.
+- etiquetas: impresion de etiquetas para entrega de productos.
+- graficos: estadisticas de actividades realizadas por los colaboradores.
+- correo electronico: envio de correo electronico.
+- tickets: pedidos orientados a la solucion de problemas.
+- sugerencias: nuevas ideas, reclamos, etc.
+- logistica: control y entrega de trabajos realizados.
+- mensajes: forma de comunicacion entre el administrador del sistema y los demas usuarios.
 
 
 
