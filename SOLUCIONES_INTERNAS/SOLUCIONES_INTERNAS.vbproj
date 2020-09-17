@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E66AFB32-2EDF-42C6-9B1B-8D9CC4713E54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SOLUCIONES_INTERNAS.My.MyApplication</StartupObject>
+    <RootNamespace>SOLUCIONES_INTERNAS</RootNamespace>
+    <AssemblyName>SOLUCIONES_INTERNAS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SOLUCIONES_INTERNAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SOLUCIONES_INTERNAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp">
+      <HintPath>Resources\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\DataS_Interno.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataS_Interno.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataS_Interno_Vistas.vb">
+      <DependentUpon>DataS_Interno_Vistas.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataS_Reportes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataS_Reportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DataS_Reportes.vb">
+      <DependentUpon>DataS_Reportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo\Autocompletar_Textbox.vb" />
+    <Compile Include="Modulo\Automatico.vb" />
+    <Compile Include="Modulo\ExportarExcel.vb" />
+    <Compile Include="Modulo\Importar.vb" />
+    <Compile Include="Modulo\Mail_Modulo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Etiqueta_Wineem.Designer.vb">
+      <DependentUpon>frm_Etiqueta_Wineem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Etiqueta_Wineem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Etiqueta_Wineem_1.Designer.vb">
+      <DependentUpon>frm_Etiqueta_Wineem_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Etiqueta_Wineem_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_GuardarActualizar_1.Designer.vb">
+      <DependentUpon>frm_GuardarActualizar_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_GuardarActualizar_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_GuardarActualizar_tarea.Designer.vb">
+      <DependentUpon>frm_GuardarActualizar_tarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_GuardarActualizar_tarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Empaque.Designer.vb">
+      <DependentUpon>frm_Listado_Empaque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Empaque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Acerca_de.Designer.vb">
+      <DependentUpon>frm_Acerca_de.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Acerca_de.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Offset.Designer.vb">
+      <DependentUpon>frm_Actualizar_Offset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Offset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Producto_Orden_Ampliada.Designer.vb">
+      <DependentUpon>frm_Actualizar_Producto_Orden_Ampliada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Producto_Orden_Ampliada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Despacho.Designer.vb">
+      <DependentUpon>frm_Despacho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Despacho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Enviar_Correo.Designer.vb">
+      <DependentUpon>frm_Enviar_Correo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Enviar_Correo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Graficos_tareas_mensuales.Designer.vb">
+      <DependentUpon>frm_Graficos_tareas_mensuales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Graficos_tareas_mensuales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Orden.Designer.vb">
+      <DependentUpon>frm_Actualizar_Orden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Orden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Producto_Orden.Designer.vb">
+      <DependentUpon>frm_Actualizar_Producto_Orden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Producto_Orden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico_Totales_Mensuales.Designer.vb">
+      <DependentUpon>frm_Grafico_Totales_Mensuales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico_Totales_Mensuales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Despacho.Designer.vb">
+      <DependentUpon>frm_Listado_Despacho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Despacho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_GuardarActualizar.Designer.vb">
+      <DependentUpon>frm_Listado_GuardarActualizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_GuardarActualizar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Movimientos.Designer.vb">
+      <DependentUpon>frm_Listado_Movimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Movimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_listado_orden_trabajo_ampliada.Designer.vb">
+      <DependentUpon>frm_listado_orden_trabajo_ampliada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_listado_orden_trabajo_ampliada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Mensaje.Designer.vb">
+      <DependentUpon>frm_Mensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Mensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Movimiento_Orden.Designer.vb">
+      <DependentUpon>frm_Movimiento_Orden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Movimiento_Orden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Movimiento_Producto.designer.vb">
+      <DependentUpon>frm_Movimiento_Producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Movimiento_Producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.vb">
+      <DependentUpon>Installer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Installer1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Datos\DataS_Interno_Vistas.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataS_Interno_Vistas.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Exportar.vb" />
+    <Compile Include="Presentacion\frm_Grafico.Designer.vb">
+      <DependentUpon>frm_Grafico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Orden_Trabajo_Ampliada.Designer.vb">
+      <DependentUpon>frm_Orden_Trabajo_Ampliada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Orden_Trabajo_Ampliada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Productos.Designer.vb">
+      <DependentUpon>frm_Productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Tarea.Designer.vb">
+      <DependentUpon>frm_Actualizar_Tarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Actualizar_Tarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Clientes.Designer.vb">
+      <DependentUpon>frm_Clientes.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentacion\frm_Colaborador.Designer.vb">
+      <DependentUpon>frm_Colaborador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Colaborador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Etiqueta_Modelo_1.Designer.vb">
+      <DependentUpon>frm_Etiqueta_Modelo_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Etiqueta_Modelo_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Generar_Informe.Designer.vb">
+      <DependentUpon>frm_Generar_Informe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Generar_Informe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Gestion_Usuarios.Designer.vb">
+      <DependentUpon>frm_Gestion_Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Gestion_Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico_1.Designer.vb">
+      <DependentUpon>frm_Grafico_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico_2.Designer.vb">
+      <DependentUpon>frm_Grafico_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Grafico_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Ingreso.Designer.vb">
+      <DependentUpon>frm_Ingreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Ingreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Orden_Trabajo.Designer.vb">
+      <DependentUpon>frm_Listado_Orden_Trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Orden_Trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Retrabajo.Designer.vb">
+      <DependentUpon>frm_Listado_Retrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Retrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Tareas.Designer.vb">
+      <DependentUpon>frm_Listado_Tareas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Listado_Tareas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Orden_Trabajo.Designer.vb">
+      <DependentUpon>frm_Orden_Trabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Orden_Trabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Pieza.Designer.vb">
+      <DependentUpon>frm_Pieza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Pieza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Principal.Designer.vb">
+      <DependentUpon>frm_Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Proceso2.Designer.vb">
+      <DependentUpon>frm_Proceso2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Proceso2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_proceso3.Designer.vb">
+      <DependentUpon>frm_proceso3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_proceso3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Procesos.Designer.vb">
+      <DependentUpon>frm_Procesos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Procesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Retrabajo.Designer.vb">
+      <DependentUpon>frm_Retrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Retrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Sector.Designer.vb">
+      <DependentUpon>frm_Sector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Sector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Sugerencia.Designer.vb">
+      <DependentUpon>frm_Sugerencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Sugerencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Tarea.Designer.vb">
+      <DependentUpon>frm_Tarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Tarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Tarea_1.Designer.vb">
+      <DependentUpon>frm_Tarea_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Tarea_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Ticket.Designer.vb">
+      <DependentUpon>frm_Ticket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Ticket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Usuario.Designer.vb">
+      <DependentUpon>frm_Usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_Vendedor.Designer.vb">
+      <DependentUpon>frm_Vendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_Vendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frm_VerMasDetalles.Designer.vb">
+      <DependentUpon>frm_VerMasDetalles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frm_VerMasDetalles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frm_reporte_orden.Designer.vb">
+      <DependentUpon>frm_reporte_orden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frm_reporte_orden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\rpt_orden.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_orden.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentacion\frm_Etiqueta_Wineem.resx">
+      <DependentUpon>frm_Etiqueta_Wineem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Etiqueta_Wineem_1.resx">
+      <DependentUpon>frm_Etiqueta_Wineem_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_GuardarActualizar_1.resx">
+      <DependentUpon>frm_GuardarActualizar_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_GuardarActualizar_tarea.resx">
+      <DependentUpon>frm_GuardarActualizar_tarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_Empaque.resx">
+      <DependentUpon>frm_Listado_Empaque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_despacho.resx">
+      <DependentUpon>frm_Despacho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_Despacho.resx">
+      <DependentUpon>frm_Listado_Despacho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_GuardarActualizar.resx">
+      <DependentUpon>frm_Listado_GuardarActualizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Mensaje.resx">
+      <DependentUpon>frm_Mensaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Sugerencia.resx">
+      <DependentUpon>frm_Sugerencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Tarea.resx">
+      <DependentUpon>frm_Tarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Tarea_1.resx">
+      <DependentUpon>frm_Tarea_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Ticket.resx">
+      <DependentUpon>frm_Ticket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_VerMasDetalles.resx">
+      <DependentUpon>frm_VerMasDetalles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_reporte_orden.resx">
+      <DependentUpon>frm_reporte_orden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rpt_orden.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_orden.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Datos\DataS_Interno_Vistas.dbml.layout">
+      <DependentUpon>DataS_Interno_Vistas.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Presentacion\frm_Acerca_de.resx">
+      <DependentUpon>frm_Acerca_de.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Actualizar_Offset.resx">
+      <DependentUpon>frm_Actualizar_Offset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Actualizar_Producto_Orden_Ampliada.resx">
+      <DependentUpon>frm_Actualizar_Producto_Orden_Ampliada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Enviar_Correo.resx">
+      <DependentUpon>frm_Enviar_Correo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Graficos_tareas_mensuales.resx">
+      <DependentUpon>frm_Graficos_tareas_mensuales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Actualizar_Orden.resx">
+      <DependentUpon>frm_Actualizar_Orden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Actualizar_Producto_Orden.resx">
+      <DependentUpon>frm_Actualizar_Producto_Orden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Grafico_Totales_Mensuales.resx">
+      <DependentUpon>frm_Grafico_Totales_Mensuales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_Movimientos.resx">
+      <DependentUpon>frm_Listado_Movimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_listado_orden_trabajo_ampliada.resx">
+      <DependentUpon>frm_listado_orden_trabajo_ampliada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Movimiento_Orden.resx">
+      <DependentUpon>frm_Movimiento_Orden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Movimiento_Producto.resx">
+      <DependentUpon>frm_Movimiento_Producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Installer1.resx">
+      <DependentUpon>Installer1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Grafico.resx">
+      <DependentUpon>frm_Grafico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Orden_Trabajo_Ampliada.resx">
+      <DependentUpon>frm_Orden_Trabajo_Ampliada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Productos.resx">
+      <DependentUpon>frm_Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Actualizar_Tarea.resx">
+      <DependentUpon>frm_Actualizar_Tarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Colaborador.resx">
+      <DependentUpon>frm_Colaborador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Etiqueta_Modelo_1.resx">
+      <DependentUpon>frm_Etiqueta_Modelo_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Generar_Informe.resx">
+      <DependentUpon>frm_Generar_Informe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Gestion_Usuarios.resx">
+      <DependentUpon>frm_Gestion_Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Grafico_1.resx">
+      <DependentUpon>frm_Grafico_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Grafico_2.resx">
+      <DependentUpon>frm_Grafico_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Ingreso.resx">
+      <DependentUpon>frm_Ingreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_Orden_Trabajo.resx">
+      <DependentUpon>frm_Listado_Orden_Trabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_Retrabajo.resx">
+      <DependentUpon>frm_Listado_Retrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Listado_Tareas.resx">
+      <DependentUpon>frm_Listado_Tareas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Orden_Trabajo.resx">
+      <DependentUpon>frm_Orden_Trabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Pieza.resx">
+      <DependentUpon>frm_Pieza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Principal.resx">
+      <DependentUpon>frm_Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Proceso2.resx">
+      <DependentUpon>frm_Proceso2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_proceso3.resx">
+      <DependentUpon>frm_proceso3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Procesos.resx">
+      <DependentUpon>frm_Procesos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Retrabajo.resx">
+      <DependentUpon>frm_Retrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Sector.resx">
+      <DependentUpon>frm_Sector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Usuario.resx">
+      <DependentUpon>frm_Usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frm_Vendedor.resx">
+      <DependentUpon>frm_Vendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\DataS_Interno.dbml.layout">
+      <DependentUpon>DataS_Interno.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Presentacion\frm_Clientes.resx">
+      <DependentUpon>frm_Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Datos\DataS_Interno.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\DataS_Interno_Vistas.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataS_Interno_Vistas.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\DataS_Reportes.xsc">
+      <DependentUpon>DataS_Reportes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataS_Reportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataS_Reportes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\DataS_Reportes.xss">
+      <DependentUpon>DataS_Reportes.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\DataS_Interno.datasource" />
+    <None Include="My Project\DataSources\SOLUCIONES_INTERNAS.My.MySettings.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solucionesgraficas1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Acceso_Usuarios.jpg" />
+    <None Include="Resources\Respuesta_Ticket1.jpg" />
+    <None Include="Resources\Respuesta_Ticket.jpg" />
+    <None Include="Resources\nuevo_ticket1.jpg" />
+    <None Include="Resources\nuevo_ticket.jpg" />
+    <None Include="Resources\respuesta_mensaje1.jpg" />
+    <None Include="Resources\respuesta_mensaje.jpg" />
+    <None Include="Resources\Solicitud_Ticket.jpg" />
+    <None Include="Resources\nuevarepeticion.jpg" />
+    <None Include="Resources\Sin título.jpg" />
+    <None Include="Resources\repeticionchapas.jpg" />
+    <None Include="Resources\pdftareasindividual1.jpg" />
+    <None Include="Resources\pdftareasindividual.jpg" />
+    <None Include="Resources\pdftareasgeneral.jpg" />
+    <None Include="Resources\ver_tarea1.jpg" />
+    <None Include="Resources\modificaruna.jpg" />
+    <None Include="Resources\modificartodas.jpg" />
+    <None Include="Resources\modificar_tarea.jpg" />
+    <None Include="Resources\PDF.jpg" />
+    <None Include="Resources\ver_orden.jpg" />
+    <None Include="Resources\modificar_orden.jpg" />
+    <None Include="Resources\alta_productos.jpg" />
+    <None Include="Resources\consultar_orden.jpg" />
+    <None Include="Resources\listadoordenes.jpg" />
+    <None Include="Resources\actualizarproducto.jpg" />
+    <None Include="Resources\actualizar_orden.jpg" />
+    <None Include="Resources\eliminar_orden.jpg" />
+    <None Include="Resources\eliminar_orden1.jpg" />
+    <None Include="Resources\eliminar_detalle.jpg" />
+    <None Include="Resources\consultar_orden1.jpg" />
+    <None Include="Resources\exportarPDF.jpg" />
+    <None Include="Resources\listadotareas.jpg" />
+    <None Include="Resources\agregarunatarea.jpg" />
+    <None Include="Resources\agregaruna.jpg" />
+    <None Include="Resources\actualizaruna.jpg" />
+    <None Include="Resources\eliminar_tarea.jpg" />
+    <None Include="Resources\consultar_tarea.jpg" />
+    <None Include="Resources\exportartareasgeneral.jpg" />
+    <None Include="Resources\eliminarrepeticion.jpg" />
+    <None Include="Resources\listado_repeticion.jpg" />
+    <None Include="Resources\eliminarrepeticion1.jpg" />
+    <None Include="Resources\Busqueda_Ticket.jpg" />
+    <None Include="Resources\eliminar_ticket.jpg" />
+    <None Include="Resources\enviar_mensaje.jpg" />
+    <None Include="Resources\enviar_mensaje1.jpg" />
+    <None Include="Resources\enviar_mensaje2.jpg" />
+    <None Include="Resources\enviar_ticket.jpg" />
+    <None Include="Resources\enviar_sugerencia.jpg" />
+    <None Include="Resources\cumple.gif" />
+    <Content Include="Resources\Fondo aplicacion.jpg" />
+    <Content Include="Resources\LOGO SISTEMA INTERNO %281%29.ico" />
+    <None Include="Resources\nuevo_producto.jpg" />
+    <None Include="Resources\principal1.jpg" />
+    <None Include="Resources\principal.jpg" />
+    <None Include="Resources\nuevaordenampliada.png" />
+    <None Include="Resources\nueva_tarea.jpg" />
+    <None Include="Resources\ver_tarea.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
