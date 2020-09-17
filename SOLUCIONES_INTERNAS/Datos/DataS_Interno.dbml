@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PREPRODUCCION" Class="DataS_Interno" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SV-PLANET-01;Initial Catalog=PREPRODUCCION;Persist Security Info=True;User ID=vheredia" SettingsObjectName="SOLUCIONES_INTERNAS.My.MySettings" SettingsPropertyName="SOLUCIONES_INTERNASConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CLIENTE" Member="CLIENTE">
+    <Type Name="CLIENTE">
+      <Column Name="CLI_id_cliente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLI_razon_social" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLI_mail_cli" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLI_telefono_cli" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CLI_domicilio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLI_localidad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLI_codigo_postal" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="CLIENTE_ORDEN_TRABAJO" Member="ORDEN_TRABAJO" ThisKey="CLI_id_cliente" OtherKey="CLI_id_cliente" Type="ORDEN_TRABAJO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VENDEDOR" Member="VENDEDOR">
+    <Type Name="VENDEDOR">
+      <Column Name="VEN_id_vendedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VEN_nombre_ven" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VEN_apellido_ven" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VEN_mail_ven" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VEN_telefono_ven" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="VENDEDOR_ORDEN_TRABAJO" Member="ORDEN_TRABAJO" ThisKey="VEN_id_vendedor" OtherKey="VEN_id_vendedor" Type="ORDEN_TRABAJO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COLABORADOR" Member="COLABORADOR">
+    <Type Name="COLABORADOR">
+      <Column Name="COL_id_colaborador" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="COL_nombre_col" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="COL_apellido_col" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SEC_id_sector" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="COLABORADOR_TAREA" Member="TAREA" ThisKey="COL_id_colaborador" OtherKey="COL_id_colaborador" Type="TAREA" />
+      <Association Name="COLABORADOR_USUARIO" Member="USUARIO" ThisKey="COL_id_colaborador" OtherKey="COL_id_colaborador" Type="USUARIO" />
+      <Association Name="SECTOR_COLABORADOR" Member="SECTOR" ThisKey="SEC_id_sector" OtherKey="SEC_id_sector" Type="SECTOR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDEN_TRABAJO" Member="ORDEN_TRABAJO">
+    <Type Name="ORDEN_TRABAJO">
+      <Column Name="ORT_id_orden_trabajo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORT_fecha_ot" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ORT_tipo_ot" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ORT_numero_ot" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ORT_observaciones_ot" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="ORT_mejoras_ot" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="VEN_id_vendedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLI_id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ORT_fecha_entrega" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="ORDEN_TRABAJO_TAREA" Member="TAREA" ThisKey="ORT_id_orden_trabajo" OtherKey="ORT_id_orden_trabajo" Type="TAREA" />
+      <Association Name="ORDEN_TRABAJO_DETALLE_ORDEN_TRABAJO" Member="DETALLE_ORDEN_TRABAJO" ThisKey="ORT_id_orden_trabajo" OtherKey="ORT_id_orden_trabajo" Type="DETALLE_ORDEN_TRABAJO" />
+      <Association Name="ORDEN_TRABAJO_DESPACHO" Member="DESPACHO" ThisKey="ORT_id_orden_trabajo" OtherKey="ORT_id_orden_trabajo" Type="DESPACHO" />
+      <Association Name="CLIENTE_ORDEN_TRABAJO" Member="CLIENTE" ThisKey="CLI_id_cliente" OtherKey="CLI_id_cliente" Type="CLIENTE" IsForeignKey="true" />
+      <Association Name="VENDEDOR_ORDEN_TRABAJO" Member="VENDEDOR" ThisKey="VEN_id_vendedor" OtherKey="VEN_id_vendedor" Type="VENDEDOR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERMISO" Member="PERMISO">
+    <Type Name="PERMISO">
+      <Column Name="PER_id_permiso" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PER_permiso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PER_abm" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="USU_id_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PIEZA" Member="PIEZA">
+    <Type Name="PIEZA">
+      <Column Name="PIE_id_pieza" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PIE_nombre_pie" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PIE_ubicacion" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="PIEZA_DETALLE_ORDEN_TRABAJO" Member="DETALLE_ORDEN_TRABAJO" ThisKey="PIE_id_pieza" OtherKey="PIE_id_pieza" Type="DETALLE_ORDEN_TRABAJO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROCESO" Member="PROCESO">
+    <Type Name="PROCESO">
+      <Column Name="PROC_id_proceso" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_detalle_orden_trabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROC_offset" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PROC_descrip_offset" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="PROC_digital" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PROC_descrip_digital" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="PROC_gran_formato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PROC_descrip_gran_formato" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="PROC_terminacion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PROC_descrip_terminacion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="PROC_logistica" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PROC_descrip_logistica" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="DETALLE_ORDEN_TRABAJO_PROCESO" Member="DETALLE_ORDEN_TRABAJO" ThisKey="id_detalle_orden_trabajo" OtherKey="id_detalle_orden_trabajo" Type="DETALLE_ORDEN_TRABAJO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTO_MOVIMIENTO" Member="PRODUCTO_MOVIMIENTO">
+    <Type Name="PRODUCTO_MOVIMIENTO">
+      <Column Name="PROD_MOV_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROD_MOV_fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ORT_id_orden_trabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PROD_MOV_tipo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PROD_MOV_cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROD_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PRODUCTO_PRODUCTO_MOVIMIENTO" Member="PRODUCTO" ThisKey="PROD_id" OtherKey="PROD_id" Type="PRODUCTO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SECTOR" Member="SECTOR">
+    <Type Name="SECTOR">
+      <Column Name="SEC_id_sector" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SEC_nombre_sector" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SECTOR_COLABORADOR" Member="COLABORADOR" ThisKey="SEC_id_sector" OtherKey="SEC_id_sector" Type="COLABORADOR" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAREA" Member="TAREA">
+    <Type Name="TAREA">
+      <Column Name="TAR_id_tarea" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TAR_tiempo_estimado" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TAR_tiempo_real" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="COL_id_colaborador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ORT_id_orden_trabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TAR_hora_fin" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TAR_carga_horaria" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TAR_detalle_tarea" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TAR_observaciones" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TAR_fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TAR_entrada" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TAR_salida" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="COLABORADOR_TAREA" Member="COLABORADOR" ThisKey="COL_id_colaborador" OtherKey="COL_id_colaborador" Type="COLABORADOR" IsForeignKey="true" />
+      <Association Name="ORDEN_TRABAJO_TAREA" Member="ORDEN_TRABAJO" ThisKey="ORT_id_orden_trabajo" OtherKey="ORT_id_orden_trabajo" Type="ORDEN_TRABAJO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIO" Member="USUARIO">
+    <Type Name="USUARIO">
+      <Column Name="USU_id_usuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USU_usuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USU_contraseña" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USU_perfil" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="COL_id_colaborador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="USUARIO_TICKET" Member="TICKET" ThisKey="USU_id_usuario" OtherKey="TIC_id_usuario" Type="TICKET" />
+      <Association Name="USUARIO_MENSAJE" Member="MENSAJE" ThisKey="USU_id_usuario" OtherKey="USU_id_usuario" Type="MENSAJE" />
+      <Association Name="COLABORADOR_USUARIO" Member="COLABORADOR" ThisKey="COL_id_colaborador" OtherKey="COL_id_colaborador" Type="COLABORADOR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[RE-TRABAJO]" Member="RE_TRABAJO">
+    <Type Name="RE_TRABAJO">
+      <Column Name="RET_id_retrabajo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RET_cantidad_producto_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RET_tamaño_producto_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_tipo_impresion_retrabajo" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="RET_papel_soporte_1_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_papel_soporte_2_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_papel_soporte_3_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_gramaje_soporte_1_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_gramaje_soporte_2_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_gramaje_soporte_3_retrabajo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RET_cantidad_soporte_1_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RET_cantidad_soporte_2_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RET_cantidad_soporte_3_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RET_formato_soporte_1_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="RET_formato_soporte_2_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="RET_formato_soporte_3_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cantidad_1_PM_offset_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_2_PM_offset_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_3_PM_offset_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RET_fecha_entrega_retrabajo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RET_impresora_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="id_detalle_orden_trabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RET_origen_area_motivo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RET_procedimiento_observaciones" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="RET_fecha_comienzo_retrabajo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="formato_1_PM_offset_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_2_PM_offset_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_3_PM_offset_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="modo_impresion_offset_retrabajo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="tipo_impresion_offset_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cantidad_chapas_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="impresora_offset_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="marca_offset_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cantidad_1_PM_digital_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_2_PM_digital_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_3_PM_digital_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="formato_1_PM_digital_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_2_PM_digital_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_3_PM_digital_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="modo_impresion_digital_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="tipo_impresion_digital_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="dato_variable_retrabajo" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="cantidad_gran_formato_retrabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tamaño_gran_formato_retrabajo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="sustrato_gran_formato_retrabajo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="calidad_gran_formato_retrabajo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="sistema_gran_formato_retrabajo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="tipo_terminacion_retrabajo" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="descripcion_terminacion_retrabajo" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Association Name="DETALLE_ORDEN_TRABAJO_RE_TRABAJO" Member="DETALLE_ORDEN_TRABAJO" ThisKey="RET_cantidad_producto_retrabajo" OtherKey="id_detalle_orden_trabajo" Type="DETALLE_ORDEN_TRABAJO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PIEZA" Member="PIEZA1">
+    <Type Name="PIEZA1">
+      <Column Name="PIE_id_pieza" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PIE_nombre_pie" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PIE_ubicacion" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="PIEZA1_DETALLE_ORDEN_TRABAJO" Member="DETALLE_ORDEN_TRABAJO" ThisKey="PIE_id_pieza" OtherKey="PIE_id_pieza_offset" Type="DETALLE_ORDEN_TRABAJO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SOPORTE" Member="SOPORTE">
+    <Type Name="SOPORTE">
+      <Column Name="SOP_id_soporte" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SOP_nombre_soporte" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SOP_ubicacion" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="SOP_campo1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SOP_campo2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DETALLE_ORDEN_TRABAJO" Member="DETALLE_ORDEN_TRABAJO">
+    <Type Name="DETALLE_ORDEN_TRABAJO">
+      <Column Name="id_detalle_orden_trabajo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DOT_cantidad_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOT_tamaño_producto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOT_tipo_impresion_dot" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DOT_papel_soporte_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOT_papel_soporte_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOT_papel_soporte_3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOT_gramaje_soporte_1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DOT_gramaje_soporte_2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DOT_gramaje_soporte_3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DOT_cantidad_soporte_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOT_cantidad_soporte_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOT_cantidad_soporte_3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOT_formato_soporte_1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOT_formato_soporte_2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOT_formato_soporte_3" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PIE_id_pieza" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORT_id_orden_trabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_1_PM_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_2_PM_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_3_PM_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="formato_1_PM_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_2_PM_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_3_PM_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PIE_id_pieza_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="modo_impresion_offset" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="tipo_impresion_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="chapas_soporte1_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="chapas_soporte2_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="chapas_soporte3_offset" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="impresora_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="marca_offset" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cantidad_1_PM_digital" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_2_PM_digital" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad_3_PM_digital" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="formato_1_PM_digital" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_2_PM_digital" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="formato_3_PM_digital" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="modo_impresion_digital" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="tipo_impresion_digital" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="dato_variable" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="cantidad_gran_formato" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tamaño_gran_formato" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="sustrato_gran_formato" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="calidad_gran_formato" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="sistema_gran_formato" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="tipo_terminacion" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="descripcion_terminacion" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Association Name="DETALLE_ORDEN_TRABAJO_PROCESO" Member="PROCESO" ThisKey="id_detalle_orden_trabajo" OtherKey="id_detalle_orden_trabajo" Type="PROCESO" />
+      <Association Name="DETALLE_ORDEN_TRABAJO_RE_TRABAJO" Member="RE_TRABAJO" ThisKey="id_detalle_orden_trabajo" OtherKey="RET_cantidad_producto_retrabajo" Type="RE_TRABAJO" />
+      <Association Name="ORDEN_TRABAJO_DETALLE_ORDEN_TRABAJO" Member="ORDEN_TRABAJO" ThisKey="ORT_id_orden_trabajo" OtherKey="ORT_id_orden_trabajo" Type="ORDEN_TRABAJO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PIEZA_DETALLE_ORDEN_TRABAJO" Member="PIEZA" ThisKey="PIE_id_pieza" OtherKey="PIE_id_pieza" Type="PIEZA" IsForeignKey="true" />
+      <Association Name="PIEZA1_DETALLE_ORDEN_TRABAJO" Member="PIEZA1" ThisKey="PIE_id_pieza_offset" OtherKey="PIE_id_pieza" Type="PIEZA1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TICKET" Member="TICKET">
+    <Type Name="TICKET">
+      <Column Name="TIC_id_ticket" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TIC_id_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIC_fecha_pedido" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TIC_recurso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_herramienta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_plazo_resolucion" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TIC_descripcion" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="TIC_prioridad" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TIC_estado" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TIC_fecha_real_cierre" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TIC_fecha_estimado_cierre" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TIC_sector" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_comentarios" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="TIC_campo_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_campo_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_campo_3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_campo_4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIC_campo_5" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="USUARIO_TICKET" Member="USUARIO" ThisKey="TIC_id_usuario" OtherKey="USU_id_usuario" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DESPACHO" Member="DESPACHO">
+    <Type Name="DESPACHO">
+      <Column Name="DES_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORT_id_orden_trabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DES_chofer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_fecha_salida" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DES_fecha_entrega" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DES_nro_remito" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DES_observaciones" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DES_nro_despacho" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_EMB_bultos" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_EMB_estado" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_EMB_observaciones" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DES_EMB_fecha_estado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DES_campo_1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_campo_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_campo_3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_campo_4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_campo_5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ORDEN_TRABAJO_DESPACHO" Member="ORDEN_TRABAJO" ThisKey="ORT_id_orden_trabajo" OtherKey="ORT_id_orden_trabajo" Type="ORDEN_TRABAJO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MENSAJE" Member="MENSAJE">
+    <Type Name="MENSAJE">
+      <Column Name="MEN_id_mensaje" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USU_id_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MEN_fecha_mensaje" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MEN_titulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MEN_comentario" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="MEN_respuesta" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="MEN_campo_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MEN_campo_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MEN_campo_3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="USUARIO_MENSAJE" Member="USUARIO" ThisKey="USU_id_usuario" OtherKey="USU_id_usuario" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SUGERENCIA" Member="SUGERENCIA">
+    <Type Name="SUGERENCIA">
+      <Column Name="SUG_id_sugerencia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SUG_fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SUG_titulo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUG_sugerencia" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SUG_campo_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUG_campo_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTO" Member="PRODUCTO">
+    <Type Name="PRODUCTO">
+      <Column Name="PROD_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROD_codigo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="PROD_descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PROD_stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PROD_stock_minimo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROD_deposito" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="PROD_campo_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PROD_campo_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PROD_campo_3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PRODUCTO_PRODUCTO_MOVIMIENTO" Member="PRODUCTO_MOVIMIENTO" ThisKey="PROD_id" OtherKey="PROD_id" Type="PRODUCTO_MOVIMIENTO" />
+    </Type>
+  </Table>
+</Database>
