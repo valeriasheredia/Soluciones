@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TextBox3.Text" xml:space="preserve">
+    <value>COMPONENTES DEL FORMULARIO REPETICION DE CHAPAS
+
+
+-	CAMPO NRO. ORDEN: muestra el nro. de la orden.
+
+-	BOTON BUSCAR ORDEN: abre el formulario "listado de ordenes".
+
+-	CAMPO FECHA DE INGRESO: fecha original de la orden. 
+
+-	CAMPO CANTIDAD: cantidad original de la orden.  
+
+-	COMBO PIEZA: pieza original de la orden. 
+
+-	CAMPO TAMAÑO: tamaño original del producto de la orden.
+
+-	CAMPO CHAPAS: cantidad de chapas original de la orden.
+
+-	COMBO IMPRESORA: impresora original de la orden.
+
+-	COMBO MARCA: marca original de la impresora de la orden.
+
+-	CAMPO FECHA RETRABAJO: fecha de realizacion del retrabajo.
+
+-	CAMPO FECHA ENTREGA RETRABAJO: nueva fecha de entrega del retrabajo.
+
+-	CAMPO CANTIDAD DE CHAPAS: nueva cantidad de chapas a utilizar.
+
+-	COMBO MOTIVO: motivo por el que se realizo el retrabajo.
+
+-	COMBO IMPRESORA: impresora a utilizar.
+
+-	COMBO MARCA: marca de la impresora a utilizar.
+
+-	CAMPO OBSERVACIONES: datos extras importantes a tener en cuenta.
+
+-	BOTON GUARDAR: guarda el retrabajo.
+
+-	BOTON CANCELAR: cierra el formulario.
+
+-	BOTON ELIMINAR: elimina un retrabajo seleccionado.
+
+-       CAMPO BUSCAR ORDEN: busqueda de la orden por su nro.
+
+-	GRILLA RETRABAJO: listado de retrabajos.
+
+</value>
+  </data>
+  <data name="TextBox5.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO  NUEVO REPETICION CHAPAS
+
+Este formulario se utilizará en el caso de que se desee agregar una nueva repetición de chapas. 
+El botón "buscar orden" abrirá el formulario del 'listado de órdenes'. Se deberá seleccionar un producto de esa orden (segundo listado) a la cual se le hará la nueva repetición y mediante un 'doble click' sobre el producto, se completarán todos los campos relacionados al encabezado. Estos campos se mostrarán a modo de información y no podrán ser modificados. 
+Una vez completos todos los campos necesarios, el botón GUARDAR cargará la nueva repetición para luego volver al formulario principal.
+El botón cancelar cierra el formulario sin haber realizado cambios.
+</value>
+  </data>
+  <data name="TextBox6.Text" xml:space="preserve">
+    <value>
+FUNCIONAMIENTO  ELIMINAR  REPETICION DE CHAPAS
+
+Este formulario se utilizará en el caso de que se desee eliminar una repetición de chapas. 
+Del listado se seleccionará la repetición que se eliminará, previo mensaje de confirmación.
+A modo de información, se cargarán los campos en la parte superior de acuerdo a lo que se seleccione.
+Una vez confirmada la acción los datos no se podrán recuperar.
+El botón cancelar cerrará el formulario sin realizar cambios.
+</value>
+  </data>
+  <data name="RichTextBox12.Text" xml:space="preserve">
+    <value>COMPONENTES DEL FORMULARIO DE RETRABAJO OFFSET / DIGITAL:
+
+
+-	BOTON BUSCAR ORDEN (...): abre el formulario de ordenes.
+
+-	CAMPO NRO DE ORDEN: muestra el nro. de la orden.
+
+-	CAMPO FECHA DE INGRESO: fecha de ingreso original.
+
+-	CAMPO FECHA DE ENTREGA: fecha de entrega original.
+
+-	CAMPO CANTIDAD: muestra la cantidad original del producto.
+ 
+-	COMBO PIEZAS: muestra el producto original.
+
+-	CAMPO TAMAÑO: tamaño original del producto.
+
+-	CAMPO FECHA RETRABAJO: fecha de retrabajo.
+
+-	CAMPO FECHA ENTREGA RETRABAJO: fecha de entrega del retrabajo.
+
+-	CAMPO CANTIDAD: nueva cantidad del producto.
+
+-	CAMPO CAUSA / ORIGEN: motivo por el que se realiza el retrabajo.
+
+-	CAMPO PROCEDIMIENTO: trabajo a realizar.
+
+-	CHECK'S OFFSET: campo de seleccion.
+
+-	CHECK'S DIGITAL: campo de seleccion.
+
+-       CAMPO PAPEL 1,2,3: papel en que se realizara el retrabajo.
+
+-	CAMPO GRAMAJE 1, 2,3: grosor del papel.
+
+-	CAMPO CANTIDAD 1, 2 ,3 PLIEGO ENTERO PRODUCTO: cantidad de pliego entero a utilizar.
+
+-	COMBO 1, 2, 3 FORMATO PLIEGO ENTERO PRODUCTO: desplegable que muestra todos los formatos de pliegos enteros.
+
+-	COMBO TIPO IMPRESIÓN OFFSET: desplegable que muestra los tipos de impresión estandar disponibles.(Se pueden agregar otros).
+
+-	COMBO MODO IMPRESIÓN OFFSET: desplegable que muestra los modos de impresión disponibles.
+
+-	COMBO IMPRESORA OFFSET: desplegable que muestra las impresoras disponibles.
+
+-	CAMPO CANTIDAD 1, 2, 3 PLIEGO MAQUINA OFFSET: cantidad de pliegos máquina de offset.
+
+-	COMBO FORMATO 1, 2, 3 PLIEGO MAQUINA OFFSET:  desplegable que muestra los formato de pliegos máquina de offset.
+
+-	COMBO TIPO IMPRESIÓN DIGITAL:  desplegable que muestra los tipos de impresión digital disponibles.
+
+-	CAMPO CANTIDAD 1, 2, 3 PLIEGO MAQUINA DIGITAL: cantidad pliego maquina digital.
+
+-	COMBO FORMATO 1, 2, 3 PLIEGO MAQUINA DIGITAL: desplegable que muestra los formatos de pliego maquina digital.
+
+-	CAMPO DATO VARIABLE: comentarios que se creen importantes de destacar sobre un dato variable realizado.
+
+-	CAMPO BUSQUEDA DE LA ORDEN: filtro de busqueda por nro. de orden.
+
+-	CAMPO BUSQUEDA MES:  filtro de busqueda por mes.
+
+-	GRILLA OFFSET / DIGITAL: listado de todos los retrabajos realizados.
+
+-	BOTON IMPRIMIR FORMULARIO:  imprime el formulario.
+
+-	BOTON ELIMINAR:  elimina un retrabajo del listado.
+
+-	BOTON GUARDAR: guarda un nuevo retrabajo.
+
+-	BOTON CANCELAR: cierra el formulario.
+</value>
+  </data>
+  <data name="TextBox7.Text" xml:space="preserve">
+    <value>
+FUNCIONAMIENTO  NUEVO RETRABAJO DIGITAL / OFFSET
+
+Este formulario se utilizará en el caso de que se desee agregar un nuevo re-trabajo de digital y/o offset. 
+El botón "buscar orden" abrirá el formulario del 'listado de órdenes' y mediante un 'doble click' sobre la orden seleccionada, se completarán todos los campos relacionados al encabezado. Estos campos se mostrarán a modo de información y no podrán ser modificados. 
+Se tildará el tipo de orden de acuerdo al producto que se desea realizar el re-trabajo (puede ser de digital y offset), habilitándose los campos relacionados. 
+Una vez completos todos los campos necesarios, el botón GUARDAR cargara el nuevo re-trabajo para luego volver al formulario principal.
+</value>
+  </data>
+  <data name="TextBox8.Text" xml:space="preserve">
+    <value>
+FUNCIONAMIENTO  ELIMINAR  RETRABAJO DIGITAL / OFFSET
+
+Este formulario se utilizará en el caso de que se desee eliminar re-trabajo de digital y/o offset. 
+Del listado de re-trabajos se seleccionará el que se eliminará, previo mensaje de confirmación.
+A modo de información, se cargarán los campos en la parte superior de acuerdo a lo que se seleccione.
+Una vez confirmada la acción los datos no se podrán recuperar.
+</value>
+  </data>
+  <data name="TextBox4.Text" xml:space="preserve">
+    <value>El formulario de PRODUCTO consta de los siguientes datos: 
+
+- CAMPO CODIGO: código del producto.
+- CAMPO DESCRIPCION: descripción del producto.
+- STOCK MINIMO: stock mínimo actual de un producto.
+- CANTIDAD EN STOCK: cantidad de stock de un producto.
+
+- BOTON GUARDAR: guardará el nuevo producto.
+- BOTON ACTUALIZAR: modificará los datos de un producto.
+- BOTON EXPORTAR A PDF: generará un pdf mostrando los datos de un producto.
+- BOTON ELIMINAR: borrará un producto seleccionado.
+- BOTON CANCELAR:cerrará el formulario sin realizar cambios.
+- CHECK PRODUCTO: se buscará por nombre de producto.
+- CHECK CODIGO: se buscará por código de producto.
+- GRILLA PRODUCTOS: muestra el listado de todos los productos.
+
+-----------------------------------------------------------------------------
+
+FUNCIONAMIENTO FORMULARIO PRODUCTO: 
+
+1 - NUEVO PRODUCTO: 
+- completar todos los campos necesarios(campos con asterisco).
+- el botón guardar, guardará el producto.
+- los botones ACTUALIZAR, ELIMINAR, EXPORTAR A PDF estarán deshabilitados.
+- la grilla estará deshabilitada.
+
+2 - ACTUALIZAR PRODUCTO: 
+- se seleccionará de la grilla un producto al que se desea modificar sus datos.
+- el botón ACTUALIZAR, modificará los datos.
+- los botones GUARDAR, ELIMINAR, EXPORTAR A PDF estarán deshabilitados.
+ - se podrán buscar los productos por su nombre o por su código, de acuerdo a lo que se seleccione.
+
+3 - ELIMINAR PRODUCTO: 
+- se seleccionará de la grilla un producto al que se desea eliminar.
+ - el botón ELIMINAR, borrará el producto.
+ - los botones GUARDAR, ACTUALIZAR, EXPORTAR A PDF estarán deshabilitados.
+- se podrán buscar los productos por su nombre o por su código, de acuerdo a lo que se seleccione.
+
+4 - CONSULTAR PRODUCTO: 
+- se seleccionará de la grilla un producto al que se desea consultar sus datos.
+- los datos seleccionados se mostrarán en su campo.
+- los botones GUARDAR, ACTUALIZAR, ELIMINAR, EXPORTAR A PDF estarán deshabilitados.
+- se podrán buscar los productos por su nombre o por su código, de acuerdo a lo que se seleccione.
+
+-------------------------------------------------------------------------------------------------------
+
+El formulario de ALTA/BAJA PRODUCTOS consta de los siguientes datos: 
+
+- CAMPO CODIGO: código del producto.
+- CAMPO DESCRIPCION: descripción del producto.
+- COMBO TIPO DE MOVIMIENTO: alta o baja del producto.
+- CAMPO ORDEN: número de orden de trabajo relacionada.
+- CAMPO CANTIDAD: nueva cantidad que se agregará al stock.
+- CAMPO INGRESE NOMBRE: búsqueda por nombre de producto.
+- BOTON BUSCAR ORDEN(...): abrirá el formulario de órdenes del gual se seleccionará mediante un doble click la orden seleccionada.
+- BOTON INGRESAR STOCK: guardará la cantidad del producto la cual se actualizará a la cantidad actual.
+- BOTON CANCELAR: cerrará el formulario sin hacer cambios.
+- GRILLA: muestra el listado de productos existentes.
+-----------------------------------------------------------------------------------------------------------------
+
+CAMPOS Y FUNCIONAMIENTO DE FORMULARIO MOVIMIENTO DE PRODUCTOS: 
+
+- COMBO MES: meses del año.
+- CAMPO PRODUCTO: búsqueda por nombre de producto.
+- GRILLA MOVIMIENTO DE PRODUCTOS: muestra el movimiento de un producto seleccionado.
+- BOTON EXPORTAR A PDF: genera un pdf con el movimiento(alta y baja) de un producto.
+- BOTON CANCELAR: cierra el formulario sin haber cambios.
+
+1 - se elegirá del combo el mes Y el producto a buscar
+2- la grilla mostrará las altas y bajas del producto en el mes seleccionado.</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>El formulario de TAREA consta de los siguientes elementos:
+
+-	CAMPO COLABORADOR: carga el nombre del colaborador.
+
+-	BOTON COLABORADOR: abre el formulario de colaboradores, del listado se seleccionara (doble clic) su nombre. 
+
+-	CAMPO FECHA: día que se guardará la o las tareas realizadas.
+
+-	CAMPO ENTRADA: horario de entrada a la planta.
+
+-	CAMPO SALIDA: horario de salida de la planta.
+
+-	CAMPO CARGA HORARIA: cantidad (en minutos) del tiempo transcurrido dentro de la planta. Este campo es automático. (No debe llenarse).
+
+-	BOTON LIMPIAR (1….20): limpia o vacía cada uno de los campos de la fila (por ej. de la tarea 2). 
+
+-	CAMPO TAREA (1…20): la tarea o trabajo que se les ha asignado a cada colaborador.
+
+-	CAMPO TIEMPO ESTIMADO (1…20): tiempo aproximado de trabajo asignado a esa tarea. (obligatorio).
+
+-	CAMPO TIEMPO REAL (1…20): tiempo que le llevo la realización de la tarea. (obligatorio).
+
+-	CAMPO OBSERVACIONES (1…20): comentario o alguna información extra que sea importante con relación a esa tarea.
+
+-	CAMPO NRO ORDEN: carga el nro. de orden.
+
+-	BOTON ODT (1…20): abre el formulario de las órdenes, del listado se seleccionara (doble clic) la orden relacionada a la tarea que se les asigno.
+ 
+-	BOTON GUARDAR: guarda la información cargada. 
+
+-	BOTON ACTUALIZAR: modificara los datos.
+
+-	BOTON CANCELAR: cierra el formulario sin guardar los cambios.
+</value>
+  </data>
+  <data name="TextBox2.Text" xml:space="preserve">
+    <value>El formulario de LISTADO DE TAREAS consta de los siguientes elementos:
+
+-	GRILLA DE COLABORADORES: muestra el listado de los colaboradores por sector.
+
+-	GRILLA LISTADO DE TAREAS: muestra las tareas de los colaboradores filtrado por día y sector al que pertenece.
+
+-	BOTON MODIFICAR TODAS: abre el formulario “Modificar Todas las Tareas” del colaborador seleccionado.
+
+-	BOTON EXPORTAR LISTADO GENERAL: Genera un PDF con las tareas de cada colaborador en un día especificado ordenado por sector.
+
+-	BOTON EXPORTAR LISTADO INDIVIDUAL: Genera un PDF con las tareas de cada colaborador en un día especificado.
+
+-	BOTON VER: muestra el listado de tareas de un colaborador filtrado por día y sector.
+
+-	BOTON AGREGAR TAREA: agrega una nueva tarea a un colaborador previamente seleccionado.
+
+-	BOTON MODIFICAR UNA: abre el formulario “Modificar una Tarea” del colaborador seleccionado.
+
+-	BOTON ELIMINAR: elimina una tarea previamente seleccionada.
+
+-	BOTON CANCELAR: cierra el formulario sin realizar cambios.
+
+-	CAMPO FECHA”: campo de búsqueda por fecha.
+
+-	COMBO SECTOR: campo de búsqueda por sector.
+</value>
+  </data>
+  <data name="RichTextBox8.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO NUEVA TAREA
+
+Este formulario se utilizará en el caso de que se desee agregar una nueva tarea. 
+Se completaran todos los campos necesarios relacionados al encabezado de la tarea. (Hora de entrada, hora de salida) El botón "buscar colaborador" abrirá el formulario del 'listado de colaboradores' y mediante un 'doble click' sobre el mismo, 
+se cargará el nombre del colaborador en el campo previamente establecido.
+
+Una vez completos todos los campos necesarios, el botón GUARDAR cargara la nueva o nuevas tareas al sistema volviendo al formulario principal.
+Si se carga más de una tarea ésta debe ir acompañada del número de orden correspondiente, es decir, si carga 4 tareas debe haber cargado las 4 órdenes relacionadas a estas, de lo contrario la aplicación mostrara un mensaje de advertencia.
+
+Nota 1: Es necesario al menos guardar una tarea.
+Nota 2: los campos tildados en rojo son OBLIGATORIOS, lo que significa que no se podrá guardar las tareas si alguno de ellos está vacío. 
+</value>
+  </data>
+  <data name="RichTextBox9.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO AGREGAR/MODIFICAR TAREA
+
+-	BOTON MODIFICAR TODAS: este botón se utilizara en el caso de que se desee actualizar todas las tareas de un colaborador previamente seleccionado.  Al presionarlo se abrirá el formulario “Modificar Todas las Tareas”, los campos de encabezado (nombre colaborador, carga horaria) estarán deshabilitados, se podrá modificar el nro. De orden haciendo click en el botón correspondiente a esa tarea, además de todos los campos habilitados. Al presionar el botón actualizar se guardara la nueva información.
+
+-	BOTON EXPORTAR LISTADO GENERAL: éste botón permanecerá deshabilitado.
+
+-	BOTON EXPORTAR LISTADO INDIVIDUAL: éste botón permanecerá deshabilitado.
+
+-	BOTON VER: éste botón permanecerá deshabilitado.
+
+-	BOTON AGREGAR TAREA: este botón se utilizara en el caso de que se desee  agregar una nueva tarea. Al presionar este botón se abrirá el formulario “Agregar nueva tarea”, completando los datos necesarios se guardara la nueva tarea al presionar el botón “guardar”. El botón “cancelar” cerrará el formulario volviendo al formulario principal.
+
+BOTON MODIFICAR UNA: este botón se utilizara en el caso de que se desee modificar los datos de una tarea específica siendo previamente seleccionado de la segunda grilla. Al presionarlo abrirá el formulario “Actualizar Tarea”. Una vez realizado los cambios el botón “actualizar” guardara los cambios realizados cerrando ambos formularios volviendo al formulario principal.
+
+-	BOTON ELIMINAR: éste botón permanecerá deshabilitado.
+
+-	BOTON CANCELAR: cierra el formulario sin haber realizado ningún cambio.
+</value>
+  </data>
+  <data name="RichTextBox10.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO ELIMINAR TAREA
+
+-	BOTON MODIFICAR TODAS: este botón permanecerá deshabilitado.
+
+-	BOTON EXPORTAR LISTADO GENERAL: este botón permanecerá deshabilitado. 
+
+-	BOTON EXPORTAR LISTADO INDIVIDUAL: este botón permanecerá deshabilitado. 
+
+-	VER: este botón permanecerá deshabilitado.
+
+-	BOTON AGREGAR TAREA: este botón permanecerá deshabilitado.
+
+BOTON MODIFICAR UNA: este botón permanecerá deshabilitado.
+
+-	BOTON ELIMINAR: este botón se utilizara en el caso de que se desee eliminar una tarea previamente seleccionada. Se seleccionara primero el colaborador (primera grilla) y luego la tarea que desea (segunda grilla). Al presionarlo se mostrara una advertencia solicitando su confirmación. En caso de aceptar se eliminara la tarea no pudiendo recuperar sus datos, en caso de no aceptar el formulario se cerrara y haber realizado ningún cambio. 
+ 
+-	BOTON CANCELAR: cierra el formulario sin haber realizado ningún cambio.
+</value>
+  </data>
+  <data name="RichTextBox11.Text" xml:space="preserve">
+    <value>
+FUNCIONAMIENTO CONSULTAR TAREAS
+
+-	BOTON MODIFICAR TODAS: éste botón permanecerá deshabilitado.
+
+-	BOTON EXPORTAR LISTADO GENERAL: si se seleccionó el día y el sector, este automáticamente generara un PDF con todas las tareas de todos los colaboradores en ese día. Si el algún colaborador no ha cargado sus tareas se mostrara que no tiene tareas cargadas al momento de ejecutar la acción. 
+
+-	BOTON EXPORTAR LISTADO INDIVIDUAL: si se seleccionó el día y el colaborador de un sector, este automáticamente generara un PDF con todas las tareas de de ese colaborador en ese día. Si el colaborador no ha cargado sus tareas se mostrara que no tiene tareas cargadas al momento de ejecutar la acción. 
+
+-	VER: para mostrar todas las tareas de un colaborador debe seleccionarse éste de la primera grilla, previamente haber filtrado por día y sector. Al presionar el botón “ver” se abrirá el formulario “Consultar tareas” que mostrará todas las tareas del colaborador en un día especifico.
+
+-	BOTON AGREGAR TAREA: éste botón permanecerá deshabilitado.
+
+BOTON MODIFICAR UNA: éste botón permanecerá deshabilitado.
+-	
+-	BOTON ELIMINAR: éste botón permanecerá deshabilitado.
+  
+-	BOTON CANCELAR: cierra el formulario sin haber realizado ningún cambio.
+</value>
+  </data>
+  <data name="RichTextBox2.Text" xml:space="preserve">
+    <value>-	BOTON BUSCAR VENDEDOR (...): abre el formulario de vendedores.
+
+-	BOTON BUSCAR CLIENTE (...): abre el formulario de clientes.
+
+-	BOTON GUARDAR: guarda la información cargada. 
+
+-	BOTON CANCELAR: cierra el formulario sin guardar los cambios.  
+
+-	CAMPO NRO ORDEN: ingresa el Nro. de Orden. 
+
+-	COMBO DIRECCION DE ENTREGA: la Dirección a la que será entregado el trabajo.
+
+-	CAMPO FECHA INGRESO: fecha de ingreso de la odt.
+
+-	CAMPO FECHA ENTREGA: fecha de entrega de la odt.
+
+-	CAMPO OBSERVACIONES: comentarios que se creen importantes de destacar.
+
+-	CHECK’S TIPO ORDEN: tipo de orden disponible para seleccionar.
+
+-	CAMPO CANTIDAD PRODUCTO: cantidad del producto a realizar.
+
+-	COMBO PIEZA PRODUCTO: desplegable que muestra todos los productos del cual se seleccionará el deseado.
+
+-	CAMPO TAMAÑO PRODUCTO: tamaño del producto a realizar.
+
+-	CAMPO PAPEL 1, 2, 3: Tipo de papel a utilizar.
+
+-	CAMPO GRAMAJE 1, 2,3: grosor del papel.
+
+-	CAMPO CANTIDAD 1, 2 ,3 PLIEGO ENTERO PRODUCTO: cantidad de pliego entero a utilizar.
+
+-	COMBO 1, 2, 3 FORMATO PLIEGO ENTERO PRODUCTO: desplegable que muestra todos los formatos de pliegos enteros.
+
+-	COMBO TIPO IMPRESIÓN OFFSET: desplegable que muestra los tipos de impresión estándar disponibles. (Se pueden agregar otros).
+
+-	COMBO MODO IMPRESIÓN OFFSET: desplegable que muestra los modos de impresión disponibles.
+
+-	COMBO IMPRESORA OFFSET: desplegable que muestra las impresoras disponibles.
+
+-	COMBO MARCA OFFSET: desplegable que muestra las marcas disponibles.
+
+-	CAMPO CANTIDAD 1, 2, 3 PLIEGO MAQUINA OFFSET: cantidad de pliegos máquina de offset.
+
+-	COMBO FORMATO 1, 2, 3 PLIEGO MAQUINA OFFSET: desplegable que muestra los formato de pliegos máquina de offset.
+
+-	CAMPO CHAPAS 1, 2, 3: cantidad de chapas.
+
+-	COMBO TIPO IMPRESIÓN DIGITAL: desplegable que muestra los tipos de impresión digital disponibles.
+
+-	CAMPO CANTIDAD 1, 2, 3 PLIEGO MAQUINA DIGITAL: cantidad pliego maquina digital.
+
+-	COMBO FORMATO 1, 2, 3 PLIEGO MAQUINA DIGITAL: desplegable que muestra los formatos de pliego maquina digital.
+
+-	CAMPO DATO VARIABLE: comentarios que se creen importantes de destacar sobre un dato variable realizado.
+
+-	CAMPO CANTIDAD GRAN FORMATO: cantidad de trabajo a realizar en gran formato.
+
+-	COMBO PIEZA GRAN FORMATO: desplegable que muestra los productos de gran formato.
+
+-	CAMPO TAMAÑO GRAN FORMATO: tamaño a realizar en gran formato.
+
+-	COMBO CALIDAD GRAN FORMATO: desplegable que muestra la calidad de impresión disponible.
+
+-	COMBO SISTEMA GRAN FORMATO: desplegable que muestra el sistema de impresión disponible.
+
+-	CHECK’S TERMINACION: tipo de terminaciones.
+
+-	CAMPO DESCRIPCION TERMINACION: comentarios que se creen importantes de destacar para terminación.
+</value>
+  </data>
+  <data name="RichTextBox4.Text" xml:space="preserve">
+    <value>
+-	GRILLA DE ORDENES (muestra el listado de las ordenes cargadas)
+
+-	GRILLA DE PRODUCTOS (muestra los productos de la orden seleccionada)
+
+-	botón “AGREGAR PRODUCTO”: agrega un nuevo producto a una orden seleccionada.
+
+-	botón “MODIFICAR ORDEN”: actualiza los datos de la orden.
+
+-	botón “ELIMINAR ORDEN”: elimina una orden y sus productos.
+
+-	botón “EXPORTAR LISTADO A PDF”: genera un pdf con los datos de la orden y sus productos.
+
+-	botón “VER”: muestra los datos de la orden y de un producto seleccionado.
+
+-	botón “MODIFICAR PRODUCTO”: actualiza los datos del producto.
+
+-	botón “ELIMINAR PRODUCTO”: elimina un producto de una orden previamente seleccionada.
+
+-	botón “CANCELAR”: cierra el formulario sin realizar cambios.
+
+-	campo “NRO ORDEN”: campo de búsqueda por número de orden.
+
+-	campo “CLIENTE/RAZON SOCIAL”: campo de búsqueda por cliente/razón social.
+
+-	campo “FECHA DE ENTREGA”: campo de búsqueda por fecha de entrega.
+</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>
+FUNCIONAMIENTO NUEVA ORDEN:
+
+Este formulario se utilizará en el caso de que se desee agregar una nueva orden. 
+Se completaran todos los campos necesarios relacionados al encabezado de la orden. El botón "buscar cliente" abrirá el formulario del 'listado de clientes' y mediante un 'doble click' sobre el mismo, 
+Éste se cargará en el campo del cliente previamente establecido.
+El mismo procedimiento se hará al buscar al vendedor, en su lugar se abrirá el “listado de vendedores” previamente cargados al sistema.
+Se tildara el tipo de orden de acuerdo al producto que se desea cargar (puede haber más de un tipo de orden), habilitándose los campos relacionados. 
+Una vez completos todos los campos necesarios, el botón GUARDAR cargara la nueva orden al sistema volviendo al formulario principal.
+
+Nota 1: los campos tildados en rojo son OBLIGATORIOS, lo que significa que no se podrá guardar la orden si alguno de ellos está vacío.
+Nota 2: completar el campo observaciones SI Y SOLO SI es necesario, o si cree que es necesaria agregar alguna información extra.
+
+</value>
+  </data>
+  <data name="RichTextBox3.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO MODIFICAR ORDEN:
+
+-	BOTON AGREGAR PRODUCTO: este botón se utilizara en el caso de que se desee agregar un nuevo producto a una orden ya existente. 
+Al presionarlo se abrirá el formulario “Agregar nuevo producto”, los campos de la orden se mostraran y estarán deshabilitados, se tildará el tipo de producto que desea cargar, al habilitarse los campos se completaran los datos necesarios y con el botón guardar se agregara el nuevo producto.
+
+-	BOTON MODIFICAR ORDEN: este botón se utilizara en el caso de que se desee modificar los datos exclusivos de la orden. (cliente, vendedor, fecha de ingreso, fecha de entrega, dirección de entrega, observaciones). Al presionarlo abrirá el formulario “Actualizar datos de la Orden”. A modo de información mostrara el nro. de orden (este no puede modificarse). El botón (…) referido al vendedor abrirá el formulario de “Vendedores”, se seleccionara mediante doble click al vendedor elegido y el formulario se cerrara trayendo al campo designado, su nombre. El mismo procedimiento se hará con el botón de clientes.
+ 
+El botón “actualizar” guardara los cambios realizados cerrando ambos formularios (“actualizar datos de la orden” y “listado de órdenes”) volviendo al formulario principal.
+
+-	BOTON ELIMINAR ORDEN: este boton estara deshabilitado.
+
+-	BOTON EXPORTAR A PDF: este boton estara deshabilitado.
+
+-	BOTON VER: este boton estara deshabilitado.
+
+BOTON MODIFICAR PRODUCTO: este botón se utilizara en el caso de que se desee modificar los datos de un producto previamente seleccionado de la segunda grilla. Al presionarlo abrirá el formulario “Actualizar productos de la Orden”. A modo de información mostrara el nro. de orden (este no puede modificarse). Al presionarlo se abrirá el formulario “Actualizar Producto”, se modificaran los datos necesarios.
+El botón “actualizar” guardara los cambios realizados cerrando ambos formularios volviendo al formulario principal.
+-	
+-	BOTON ELIMINAR PRODUCTO: este botón estará deshabilitado.
+ 
+-	BOTON CANCELAR: cierra el formulario sin haber realizado ningún cambio.
+</value>
+  </data>
+  <data name="RichTextBox5.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO ELIMINAR ORDEN:
+
+-	BOTON AGREGAR PRODUCTO: este botón estará deshabilitado.
+
+-	BOTON ELIMINAR ORDEN: este botón se utilizara en el caso de que se desee eliminar una orden previamente seleccionada. Al presionarlo se mostrara una advertencia solicitando su confirmación. En caso de aceptar se eliminara la orden y sus productos no pudiendo recuperar sus datos, en caso de no aceptar el formulario se cerrara y haber realizado ningún cambio.  
+
+-	BOTON EXPORTAR A PDF: estará generará un pdf en el escritorio de la pc con la información de la orden y sus productos.
+
+-	BOTON VER: este botón estará deshabilitado.
+
+BOTON MODIFICAR PRODUCTO: este botón estará deshabilitado.
+-	
+-	BOTON ELIMINAR PRODUCTO: este botón se utilizara en el caso de que se desee eliminar un producto previamente seleccionado. Se seleccionara primero la orden (primera grilla) y luego el producto que desea (segunda grilla).
+-	Al presionarlo se mostrara una advertencia solicitando su confirmación. En caso de aceptar se eliminara el producto no pudiendo recuperar sus datos, en caso de no aceptar el formulario se cerrara y haber realizado ningún cambio.  
+-	BOTON CANCELAR: cierra el formulario sin haber realizado ningún cambio.
+</value>
+  </data>
+  <data name="RichTextBox6.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO CONSULTAR ORDEN:
+
+-	BOTON AGREGAR PRODUCTO: este botón estara deshabilitado.
+
+-	BOTON ELIMINAR ORDEN: este botón estara deshabilitado.
+
+-	BOTON EXPORTAR A PDF: estará generará un pdf en el escritorio de la pc con la información de la orden y sus productos.
+
+-	BOTON VER: este botón se utilizara en el caso de que se desee consultar un producto previamente seleccionado. Se seleccionara primero la orden (primera grilla) y luego el producto que desea (segunda grilla). Todos los campos estarán deshabilitados.
+El botón “cancelar” cerrará el formulario volviendo al formulario principal.
+
+BOTON MODIFICAR PRODUCTO: este botón estara deshabilitado.
+
+-	BOTON ELIMINAR PRODUCTO: este botón estara deshabilitado.
+ 
+-	BOTON CANCELAR: cierra el formulario sin haber realizado ningún cambio.
+</value>
+  </data>
+  <data name="RichTextBox7.Text" xml:space="preserve">
+    <value>El formulario PRINCIPAL contiene las siguientes pestañas:
+
+- USUARIO:  
+* nuevo: da de alta a un nuevo usuario.
+* modificar: actualiza los datos de un usuario existente.
+ * eliminar: da de baja a un usuario.
+ * consultar: muestra datos de los usuarios.
+
+- COLABORADOR: 
+* nuevo: da de alta a un nuevo colaborador.
+ * modificar: actualiza los datos de un colaborador existente.
+* eliminar: da de baja a un colaborador.
+* consultar: muestra datos de los colaboradores.
+
+- VENDEDOR: 
+* nuevo: da de alta a un nuevo vendedor.
+* modificar: actualiza los datos de un vendedor existente.
+* eliminar: da de baja a un vendedor.
+* consultar: muestra datos de los vendedores.
+
+- CLIENTE:   
+* nuevo: da de alta a un nuevo cliente.
+* modificar: actualiza los datos de un cliente existente.
+* eliminar: da de baja a un cliente.
+* consultar: muestra datos de los clientes.
+
+- PIEZA:   
+* nuevo: da de alta a un nueva pieza.
+* modificar: actualiza los datos de una pieza existente.
+* eliminar: da de baja a una pieza.
+* consultar: muestra datos de las piezas.
+
+
+- SECTOR: 
+* nuevo: da de alta a un nuevo sector.
+* modificar: actualiza los datos de un sector existente.
+* eliminar: da de baja a un sector.
+* consultar: muestra datos de los sectores.
+
+- TAREA:  
+* nuevo: da de alta a una nueva tarea.
+* modificar: actualiza los datos de una tarea existente.
+* eliminar: da de baja a una tarea.
+* consultar: muestra datos de las tareas.
+
+- PRODUCTO: 
+* Gestión de Productos 
+          ° nuevo: da de alta a un nuevo producto.
+          ° modificar: actualiza los datos de un producto existente.
+          ° eliminar: da de baja a un producto.
+* Stock de Productos
+           ° alta: da de alta una nueva cantidad de un producto.
+           ° baja: da de baja una cantidad de un producto.
+           ° consultar productos: muestra datos de los productos.
+           ° consultar movimientos: muestra altas y bajas de los productos.
+
+- ORDEN TRABAJO: 
+* nuevo: da de alta a una nueva orden de trabajo.
+* modificar: actualiza los datos de una orden de trabajo existente.
+* eliminar: da de baja a una orden de trabajo.
+* consultar: muestra datos de las orden de trabajo.
+
+- RE-TRABAJO: 
+* Repetición de Chapas 
+                ° nuevo: da de alta a un nueva repetición de chapas.
+	° eliminar: da de baja a una repetición de chapas.
+* Digital / Offset
+	° nuevo: da de alta a un nuevo re-trabajo de digital/offset.
+	 ° eliminar: da de baja a un nuevo re-trabajo de digital/offset.
+                 ° consultar: 
+	 ° Repetición de Chapas: muestra datos de re-trabajo respecto a la repetición de chapas.
+	 ° Digital / Offset: muestra datos de re-trabajo de digital7offset.
+			
+- ETIQUETAS: genera etiquetas.
+
+- ESTADISTICAS: 
+* Tareas
+	°Diarias por Colaborador: muestra los tiempos estimado y real de cada colaborador dentro del mes.
+	°Mensuales por Sector: muestra los tiempos estimados y reales de cada sector.
+
+- CORREO ELECTRONICO: área en construcción.
+
+- ACERCA DE: hace referencia a las partes más importantes del sistema.
+</value>
+  </data>
+  <data name="TextBox9.Text" xml:space="preserve">
+    <value>COMPONENTES DEL FORMULARIO TICKET
+
+En la pestaña solicitud:
+
+ -	CHECK NUEVO: limpia los campos para cargar un nuevo ticket.
+	
+-	CAMPO NRO. TICKET: muestra el nro. De ticket.
+
+-	CAMPO FECHA DE PEDIDO: fecha de pedido en el que fue solicitado el ticket. 
+
+-	CAMPO USUARIO: muestra el usuario registrado y el que va a realizar el pedido.  
+
+-	CAMPO RECURSO: muestra la necesidad de atención del recurso. 
+
+-	CAMPO HERRAMIENTA: muestra la máquina o elemento de trabajo.
+
+-	CAMPO PLAZO DE RESOLUCION: muestra el plazo o tiempo en que se necesita que el inconveniente sea solucionado.
+
+-	COMBO DESCRIPCION: muestra una descripción en relación al pedido de ticket.
+
+-	BOTON SOLICITUD: guarda la solicitud creada por el usuario.
+
+-	BOTON CANCELAR: cierra el formulario.
+
+-	COMBO PRIORIDAD: muestra la prioridad de la solicitud.
+
+-	COMBO ESTADO: muestra el estado en que se encuentra el pedido de ticket.
+
+-	CAMPO FECHA ESTIMADA: muestra la fecha estimada de solucion.
+
+-	CAMPO FECHA REAL: muestra la fecha real de solución.
+
+-	CAMPO SECTOR: muestra el sector al que se dirige el pedido de ticket.
+
+-	CAMPO COMENTARIOS: muestra comentarios en respuesta a la solicitud.
+
+-	BOTON RESPUESTA: da respuesta a una solicitud.
+
+-	BOTON CANCELAR: cierra el formulario.
+
+-	BOTON ELIMINAR: elimina un ticket seleccionado.
+
+En la pestaña Búsqueda:
+-	COMBO ESTADO: muestra los tickets de acuerdo al estado seleccionado.
+
+-	GRILLA: muestra el listado de tickets.
+
+-	BOTON EXPORTAR A PDF: genera un pdf con los tickets según el estado seleccionado.
+
+-	BOTON ELIMINAR: elimina un ticket seleccionado.
+
+-	BOTON CANCELAR: cierra el formulario.
+</value>
+  </data>
+  <data name="TextBox10.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO  NUEVO TICKET
+
+Este formulario se utilizará en el caso de que se desee atención sobre alguna MAQUINA/RECURSO o sobre algún SISTEMA/APLICACION. 
+El botón “TICKET” del formulario principal abre el formulario de solicitud de tickets.
+De acuerdo al perfil de usuario que se registre se podrá solicitar un nuevo ticket(COLABORADOR o SUPERVISOR) o responder un ticket ya solicitado (ADMINISTRADOR).
+
+-	Si el perfil de usuario es ADMINISTRADOR se abrirá el formulario en la pestaña de búsqueda, donde se mostrarán todos los tickets en condición de abierto (sin respuesta). El usuario ira respondiendo uno a uno las solicitudes cambiando el estado según corresponda.
+
+-	Si el usuario es COLABORADOR o SUPERVISOR  se abrirá el formulario en la pestaña de solicitud con los campos habilitados para realizar el pedido. Una vez realizado, se cerrará el formulario volviendo al “principal”. 
+Haciendo doble click sobre un ticket en particular del listado, se cambiara de solapa a “solicitud” donde se podrá ver, a modo de consulta, lo solicitado por el usuario registrado y la respuesta correspondiente. (Esto es si el administrador respondió a la solicitud).
+El check “nuevo” limpia los campos permitiendo cargar otra solicitud.
+El botón cancelar cierra el formulario sin haber realizado cambios.
+
+NOTA: el usuario no podrá modificar la solicitud, en caso de ser necesario tendrá que crear un nuevo ticket.</value>
+  </data>
+  <data name="TextBox11.Text" xml:space="preserve">
+    <value>FUNCIONAMIENTO ELIMINAR TICKET
+
+Este formulario se utilizará en el caso de que se desee eliminar un ticket. 
+El botón “TICKET” del formulario principal abre el formulario de solicitud de tickets.
+-       Si el perfil de usuario es ADMINISTRADOR se abrirá el formulario en la pestaña de búsqueda, donde aparecera habilitado el botón "Eliminar" .
+-       Si el usuario es COLABORADOR o SUPERVISOR no podrá eliminar ticket. 
+Haciendo click sobre un ticket en particular del listado, se eliminará previa confirmación.
+El botón cancelar cierra el formulario sin haber realizado cambios.</value>
+  </data>
+  <data name="TextBox12.Text" xml:space="preserve">
+    <value>COMPONENTES DEL FORMULARIO TICKET:
+
+-	CAMPO FECHA: fecha en que fue enviado el mensaje. 
+
+-	CAMPO USUARIO: muestra el usuario logueado y al que va dirigido el mensaje.  
+
+-	CAMPO TITULO: motivo del mensaje. 
+
+-	CAMPO OBSERVACION DE CARGA: observación que se encontro con respecto a la carga de tareas.
+
+-	BOTON ENVIO: envia el mensaje al usuario.
+
+-	CAMPO RESPUESTA: respuesta del usuario a la observacion o solicitud.
+
+-	BOTON RESPUESTA: envia la respuesta del usuario.
+
+FUNCIONAMIENTO: 
+
+El ADMINISTRADOR del sistema enviará un mensaje a cada usuario de la aplicación con las observaciones realizadas con respecto a la carga de tareas.
+Cada usuario (SUPERVISOR Y COLABORADOR), al ingresar al sistema se le abrirá el formulario MENSAJE con el comentario realizado por el administrador. 
+El usuario dará respuesta según sea el caso y el formulario se cerrará permitiendo interactuar con el formulario principal. 
+Cabe destacar que si no hubo observación con respecto a su carga de tareas, éste formulario no aparecerá.
+
+IMPORTANTE: SI LA RESPUESTA DEL USUARIO ES CONSIDERADA SIN FUNDAMENTO SE LE VOLVERA A ENVIAR EL MENSAJE.</value>
+  </data>
+  <data name="TextBox13.Text" xml:space="preserve">
+    <value>COMPONENTES DEL FORMULARIO SUGERENCIA:
+
+-	CAMPO FECHA: fecha en que se envia la sugerencia. 
+
+-	CAMPO TITULO: motivo de la sugerencia. 
+
+-	CAMPO SUGERENCIA: observación que se desea enviar.
+
+-	BOTON ENVIO: envia la sugerencia.
+
+-	BOTON CANCELAR: cierra el formulario.
+
+FUNCIONAMIENTO: 
+
+Se completan los campos de título y Sugerencia y se envia el mensaje.
+
+NOTA:  es ANONIMO (no se guardan nombres ni usuarios que envian la sugerencia).</value>
+  </data>
+</root>
