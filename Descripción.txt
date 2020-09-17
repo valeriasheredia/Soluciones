@@ -1,10 +1,11 @@
 Breve descripcion: 
-Creado en el año 2019. Sistema basado en linq, sql server.
+Creado en el año 2019. Sistema basado en linq, sql server. 
 
 Modulos: 
-- usuarios
-- clientes
-- vendedores
+- ingreso: segun el perfil de usuario se tendra acceso a distintas partes del sistema. 
+- usuarios: alta, modificacion, baja, consulta de usuarios.
+- clientes: alta, modificacion, baja, consulta de clientes (necesario para la carga de la orden de produccion).
+- vendedores: alta, modificacion, baja, consulta de vendedores (necesario para la carga de la orden de produccion).
 - piezas
 - sector
 - colaboradores
@@ -19,6 +20,7 @@ Modulos:
 - sugerencias
 - logistica
 - mensajes
+- permisos
 
 
 
