@@ -1,0 +1,37 @@
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.exe
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.pdb
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.xml
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.Resources.resources
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.vbproj.GenerateResource.Cache
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.exe
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.xml
+e:\usuarios\desarrollo\documents\visual studio 2010\Projects\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.pdb
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.exe.config
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.exe
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.pdb
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\bin\Debug\SOLUCIONES_INTERNAS.xml
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Actualizar_Tarea.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Colaborador.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Generar_Informe.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_gestion_usuarios.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_ingreso.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Listado_Orden_Trabajo.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Listado_Retrabajo.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Listado_Tareas.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Orden_Trabajo.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Pieza.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Principal.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_retrabajo.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Sector.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Tarea.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Usuario.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Vendedor.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Cliente.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.Resources.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.vbproj.GenerateResource.Cache
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.exe
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.xml
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.pdb
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.Form1.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.frm_Etiqueta_Modelo_1.resources
+E:\Desarrollo\trunk\SOLUCIONES_INTERNAS\SOLUCIONES_INTERNAS\obj\x86\Debug\SOLUCIONES_INTERNAS.Installer1.resources
