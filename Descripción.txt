@@ -25,8 +25,10 @@ Modulos:
 
 Funcionamiento: 
 Al ingresar al sistema, segun su perfil, el usuario tendra acceso a distintas partes del mismo. El perfil ADMINISTRADOR tendra control total del sistema. 
+En el sector de PREPRENSA se hace la carga y mantenimiento de clientes, vendedores, piezas, ordenes de produccion segun su tipo, ademas de re-trabajos. (encuadernado, ploteo, etiquetas, etc).
+En los sectores DIGITAL, OFFSET, TERMINACION, MANTENIMIENTO, LOGISTICA, DEPOSITO, EMPAQUE se hace la carga de las actividades de los colaboradores (cada uno ingresa con su usuario y contraseña) aqui se registran tiempos asignados por el Supervisor del sector y tiempos reales de cada colaborador en cada trabajo a realizar.
+El sector de DEPOSITO lleva el control de productos semi-elaborados (facturas impresas sin dato variable).
+En el sector de EMPAQUE se generan e imprimen las etiquetas para la entrega de productos. 
+En el sector de LOGISTICA se podra organizar trabajos a entregar y controlar trabajos ya entregados.
+Todos los sectores podran hacer sugerencias, solicitar pedidos, enviar correos electronicos y responder mensajes enviados por el administrador. Cada usuario podra ver donde se encuentra la orden de produccion, por ejemplo si la misma se encuentra impresa o si ya fue entregada. 
 
-En el sector de PREPRENSA se hace la carga y mantenimiento de clientes, vendedores, ordenes de produccion segun su tipo, ademas de re-trabajos. (encuadernado, ploteo, etiquetas, etc).
-En los sectores DIGITAL, OFFSET, TERMINACION, MANTENIMIENTO, LOGISTICA, DEPOSITO, EMPAQUE se hace la carga de las actividades de los colaboradores (cada uno ingresa con su usuario y contraseña) aqui se registran tiempos asignados por el superior del sector y tiempos reales de cada colaborador en cada trabajo a realizar.
-El sector de DEPOSITO lleva el control de altas y bajas de productos semi-elaborados (facturas impresas sin dato variable).
-Todos los sectores podran hacer sugerencias, solicitar pedidos...
