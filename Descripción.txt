@@ -1,1 +1,24 @@
+Breve descripcion: 
+Creado en el año 2019. Sistema basado en linq, sql server.
+
+Modulos: 
+- usuarios
+- clientes
+- vendedores
+- piezas
+- sector
+- colaboradores
+- ordenes de produccion
+- retrabajos
+- stock 
+- tareas
+- etiquetas de entrega
+- graficos
+- correo electronico
+- tickets
+- sugerencias
+- logistica
+- mensajes
+
+
 
